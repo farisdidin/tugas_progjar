@@ -21,7 +21,7 @@ try:
 				
 			else:
 				data = sock.recv(1024)
-				print sock.getpeername(), data
+				print sock.getpeername(), data.replace('unduh ', '')
 				if data:
 					sock.send(data)
 				else:
